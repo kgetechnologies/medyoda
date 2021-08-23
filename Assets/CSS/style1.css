@@ -1,15 +1,3 @@
-h1,
-h2,
-h3,
-h4 {
-    font-weight: 700;
-}
-
-h5,
-h6 {
-    font-weight: 600;
-}
-
 img {
     width: 100%;
     height: auto;
@@ -1814,14 +1802,10 @@ a:hover {
 }
 
 
-/* ----------------------------------------------------------------
-           [ End Blog ]
-  -----------------------------------------------------------------*/
+/* End Blog */
 
 
-/* ----------------------------------------------------------------
-           [ start sponsors ]
-  -----------------------------------------------------------------*/
+/* start sponsors */
 
 .sponsors {
     background-image: url("./Assets/Images/bg.jpg");
@@ -2066,6 +2050,7 @@ a:hover {
 
 .footer .footer-widget-list {
     margin: 0;
+    padding: 0;
 }
 
 .footer .footer-widget-list li {
@@ -2085,19 +2070,6 @@ a:hover {
     font-weight: 400;
     opacity: 0.8;
     font-weight: 600;
-}
-
-.footer .footer-widget-list li a:before {
-    content: '\f105';
-    font-weight: 700;
-    vertical-align: bottom;
-    font-family: Font Awesome\ 5 Free;
-    color: #000;
-    opacity: 0.8;
-    padding-right: 8px;
-    -webkit-transition-duration: .3s;
-    transition-duration: .3s;
-    font-size: 19px;
 }
 
 .footer .footer-widget-list li a:hover {

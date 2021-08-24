@@ -1834,10 +1834,10 @@ a:hover {
 }
 
 body {
-    background-image: url("./Assets/Images/slide-01.png");
+    /*  background-image: url("./Assets/Images/slide-01.png");
     background-size: cover;
     background-repeat: no-repeat;
-    animation: animate 10s ease-in-out infinite;
+    animation: animate 10s ease-in-out infinite;*/
     overflow-x: hidden;
 }
 
@@ -1858,7 +1858,7 @@ body {
 /* start sponsors */
 
 .sponsors {
-    background-image: url("./Assets/Images/bg.jpg");
+    /*  background-image: url("./Assets/Images/bg.jpg");*/
     background-size: cover;
     background-attachment: fixed;
     position: relative;

@@ -1313,7 +1313,7 @@ a:hover {
 /*  start video */
 
 .video {
-    background-image: url("./Assets/Images/bg.jpg");
+    background-image: url("../Images/bg.jpg");
     background-position: 50% 50%;
     background-size: cover;
     position: relative;

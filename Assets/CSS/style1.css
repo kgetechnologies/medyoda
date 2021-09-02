@@ -44,7 +44,7 @@ label i.fas {
 }
 
 .wrapper {
-    position: absolute;
+    position: fixed;
     z-index: 999;
     right: 30px;
     bottom: 0px;

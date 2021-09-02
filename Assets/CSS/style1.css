@@ -3,30 +3,358 @@ img {
     height: auto;
 }
 
-.whatsap_float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-    padding-top: 7px;
+
+/* Whatsap icon*/
+
+#click {
+    display: none;
 }
 
-@media screen and (max-width: 767px) {
-    .whatsapp_float {
-        width: 40px;
-        height: 40px;
-        bottom: 20px;
-        right: 10px;
-        font-size: 22px;
+label {
+    z-index: 999;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    height: 55px;
+    width: 55px;
+    background: #25d366;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+label i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+}
+
+label i.fas {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.head-text {
+    position: fixed;
+}
+
+.wrapper {
+    position: absolute;
+    z-index: 999;
+    right: 30px;
+    bottom: 0px;
+    max-width: 600px;
+    max-height: 450px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#click:checked~.wrapper {
+    opacity: 1;
+    bottom: 85px;
+    pointer-events: auto;
+}
+
+.wrapper .head-text {
+    line-height: 60px;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    padding: 0 30px;
+    font-weight: 500;
+    font-size: 20px;
+    background: #25d366;
+}
+
+.wrapper .chat-box {
+    padding: 20px;
+    width: 100%;
+}
+
+.chat-box .desc-text {
+    color: #515365;
+    text-align: center;
+    line-height: 25px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.chat-box form {
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 25px;
+    border: 1px solid lightgrey;
+}
+
+.chat-box form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.chat-box form .field:last-child {
+    margin-bottom: 15px;
+}
+
+form .field input,
+form .field button,
+form .textarea textarea {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+form .field input:focus,
+form .textarea textarea:focus {
+    border-color: #fc83bb;
+}
+
+form .field input::placeholder,
+form .textarea textarea::placeholder {
+    color: silver;
+    transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder,
+form .textarea textarea:focus::placeholder {
+    color: lightgrey;
+}
+
+.chat-box form .textarea {
+    height: 70px;
+    width: 100%;
+}
+
+.chat-box form .textarea textarea {
+    height: 100%;
+    border-radius: 50px;
+    resize: none;
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
+.chat-box form .field button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    background: #25d366;
+    transition: all 0.3s ease;
+}
+
+.chat-box form .field button:active {
+    transform: scale(0.97);
+}
+
+@keyframes bounce {
+    0% {
+        transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     }
+    4.7% {
+        transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    9.41% {
+        transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    14.11% {
+        transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    18.72% {
+        transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    24.32% {
+        transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    29.93% {
+        transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    35.54% {
+        transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    41.04% {
+        transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    52.15% {
+        transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    63.26% {
+        transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    85.49% {
+        transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    100% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+}
+
+@media only screen and (max-device-width: 667px),
+screen and (max-width: 450px) {
+    .avenue-messenger {
+        z-index: 2147483001!important;
+        width: 100%!important;
+        height: 100%!important;
+        max-height: none!important;
+        top: 0!important;
+        left: 0!important;
+        right: 0!important;
+        bottom: 0!important;
+        -webkit-border-radius: 0!important;
+        -moz-border-radius: 0!important;
+        border-radius: 0!important;
+        background: #fff;
+    }
+    .avenue-messenger div.agent-face {
+        top: -10px!important;
+    }
+    .chat {
+        -webkit-border-radius: 0!important;
+        -moz-border-radius: 0!important;
+        border-radius: 0!important;
+        max-height: initial!important;
+    }
+    .chat-title {
+        padding: 20px 20px 15px 10px!important;
+        text-align: left;
+    }
+    .circle {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #fff;
+    }
+}
+
+@media only screen and (min-device-width: 667px) {
+    div.half {
+        margin: auto;
+        width: 80px;
+        height: 40px;
+        background-color: #fff;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        border-bottom: 0;
+        box-shadow: 1px 4px 20px rgba(22, 20, 19, 0.6);
+    }
+}
+
+.wcs_popup_person_container {
+    /*max-height: 470px;
+    overflow-y: scroll;*/
+    background: #fff;
+    padding: 20px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -webkit-box-shadow: 0 4px 8px 1px rgba(43, 43, 43, .15);
+    -moz-box-shadow: 0 4px 8px 1px rgba(43, 43, 43, .15);
+    -o-box-shadow: 0 4px 8px 1px rgba(43, 43, 43, .15);
+    -ms-box-shadow: 0 4px 8px 1px rgba(43, 43, 43, .15);
+    box-shadow: 0 4px 8px 1px rgba(43, 43, 43, .15);
+}
+
+
+/* PERSON */
+
+.wcs_popup_person {
+    background: #f5f7f9;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+    cursor: pointer;
+    -webkit-transition: .2s ease all;
+    -moz-transition: .2s ease all;
+    transition: .2s ease all;
+}
+
+.wcs_popup_person:hover {
+    -webkit-box-shadow: 0 1px 2px rgba(43, 43, 43, .15);
+    -moz-box-shadow: 0 1px 2px rgba(43, 43, 43, .15);
+    -o-box-shadow: 0 1px 2px rgba(43, 43, 43, .15);
+    -ms-box-shadow: 0 1px 2px rgba(43, 43, 43, .15);
+    box-shadow: 0 1px 2px rgba(43, 43, 43, .15);
+}
+
+.wcs_popup_person:last-child {
+    margin-bottom: 0;
+}
+
+.wcs_popup_person::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* PERSON IMG */
+
+.wcs_popup_person_img {
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.wcs_popup_person_img img {
+    border: 2px solid #26C281;
+    border-radius: 50%;
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+
+/* PERSON CONTENT */
+
+.wcs_popup_person_content {
+    padding-left: 15px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* PERSON NAME */
+
+.wcs_popup_person_name {
+    font-size: 14px;
+    color: #383838;
+    font-weight: bold;
+}
+
+
+/* PERSON DESCRIPTION */
+
+.wcs_popup_person_description {
+    font-size: 11px;
+    line-height: 18px;
+    color: #8c8c8c;
+}
+
+
+/* PERSON STATUS */
+
+.wcs_popup_person_status {
+    font-size: 10px;
+    vertical-align: middle;
+    color: #fff;
+    background: #26C281;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 1px 5px;
 }
 
 span,

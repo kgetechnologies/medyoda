@@ -1254,6 +1254,7 @@ a:hover {
 .about .info p {
     margin: 0 0 30px;
     word-spacing: 1px;
+    text-align: justify;
 }
 
 .about .info .info-list i {

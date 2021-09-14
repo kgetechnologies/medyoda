@@ -1760,7 +1760,7 @@ a:hover {
 /*  09 Start Testimonials */
 
 .testimonials-grid .item {
-    padding: 20px 25px;
+    padding: 10px 25px;
     position: relative;
     z-index: 3;
     background: #fff;
@@ -2541,7 +2541,6 @@ body {
 
 .footer .sub-footer {
     background-color: #eeeeee;
-    margin-top: 80px;
     padding: 20px 0 10px;
     border-top: 1px solid #fff;
     color: #222;

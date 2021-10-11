@@ -23,6 +23,91 @@
         #moreText {
             display: none;
         }
+
+        @media screen and (max-width: 700px){
+            .box{
+              width: 70%;
+            }
+            .popup{
+              width: 70%;
+            }
+          }
+
+          .box {
+            width: 40%;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.2);
+            padding: 35px;
+            border: 2px solid #fff;
+            border-radius: 20px/50px;
+            background-clip: padding-box;
+            text-align: center;
+          }
+          
+          .button {
+            font-size: 1em;
+            padding: 10px;
+            color: #fff;
+            border: 2px solid #06D85F;
+            border-radius: 20px/50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+          }
+          .button:hover {
+            background: #06D85F;
+          }
+          
+          .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+          }
+          .overlay:target {
+            visibility: visible;
+            opacity: 1;
+          }
+          
+          .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+          }
+          
+          .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+          }
+          .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+          }
+          .popup .close:hover {
+            color: #06D85F;
+          }
+          .popup .content {
+            max-height: 30%;
+            overflow: auto;
+          }
+
+
     </style>
 
 </head>
@@ -322,7 +407,7 @@
                         <span class="icon"><i class="fa fa-motorcycle"></i></span>
                         <div class="cont">
                             <h5 class="mb-10">Study Medicine Abroad</h5>
-                            <p class="pb-10"> MedYoda is one of the few companies recognized by the Kyrgyzstan University to facilitate International Students aspiring to study medicine abroad.<p>
+                            <a href="#popup2" class="pb-10"> MedYoda is one of the few companies recognized by the Kyrgyzstan University to facilitate International Students aspiring to study medicine abroad.<p>
                         </div>
                     </div>
                 </div>
@@ -332,10 +417,38 @@
                         <span class="icon"><i class="fa fa-motorcycle"></i></span>
                         <div class="cont">
                             <h5 class="mb-10">Ambulance Automation Research</h5>
-                            <p class="pb-10">Pre-hospital care and ambulance automation are an unexplored sector in the health care industry.<p>
+                            <a href="#popup1" class="pb-10">Pre-hospital care and ambulance automation are an unexplored sector in the health care industry.</a>
                         </div>
                     </div>
                 </div>
+
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            Pre-hospital care and ambulance automation are an unexplored sector in the health care industry. 
+      	India witness’s approximately 400 road accident related dearth's every day. Sadly, 54.1% of people killed in road accidents are in the 15-34 years age group.
+      	The Government of India, Government of Rajasthan and the World Bank have signed a US$250 million loan agreement for the Rajasthan State Highways Development Program II Project to build the state's capacity to better manage its highways and improve traffic flows to ensure road safety and to reduce the causalities caused by RTA’s.
+.     	MedYoda with its team of Doctors and Transport Automation experts are closely working with the Tamil Nadu police and IIT Madras. They have designed an ambulance automation project to support IRAD. The proposal is currently under review with IIT Madras. 
+      	The project aims in bridging the hospitals, police & Fire to work on a common platform. MedYoda is also working on an AI software that can help us predict the future occurrence of accidents with precise date, time and location.  
+      	MedYoda believes this prediction will revolutionize the fields of trauma care and redefine pre-hospital care.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popup2" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            MedYoda is one of the few companies recognized by the Kyrgyzstan University to facilitate International Students aspiring to study medicine abroad. Our company stands out among the rest as we not only help with admissions but also provide support until graduation. We are exclusive partner of many top universities of Kyrgyzstan. 
+We have Indian origin Educational Advisor representatives to provide pastoral, welfare care and to support our students. 
+Our global team of highly qualified Education Consultants will always provide honest, reliable and unbiased advice which will be individually tailored to meet the needs of every student.
+
+                        </div>
+                    </div>
+                </div>
+
+
 
             </div>
         </div>

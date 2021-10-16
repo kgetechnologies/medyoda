@@ -23,6 +23,103 @@
         #moreText {
             display: none;
         }
+
+        @media screen and (max-width: 700px){
+            .box{
+              width: 70%;
+            }
+            .popup{
+              width: 70%;
+            }
+          }
+
+          .box {
+            width: 40%;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.2);
+            padding: 35px;
+            border: 2px solid #fff;
+            border-radius: 20px/50px;
+            background-clip: padding-box;
+            text-align: center;
+          }
+          
+          .button {
+            font-size: 1em;
+            padding: 10px;
+            color: #fff;
+            border: 2px solid #06D85F;
+            border-radius: 20px/50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+          }
+          .button:hover {
+            background: #06D85F;
+          }
+          
+          .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+          }
+          .overlay:target {
+            visibility: visible;
+            opacity: 1;
+          }
+          
+          .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            height: 50%;
+            width: 60%;
+            overflow-y: scroll;
+            position: relative;
+            transition: all 5s ease-in-out;
+          }
+            
+          
+
+          .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+          }
+          .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+          }
+          .popup .close:hover {
+            color: #06D85F;
+          }
+          .popup .content {
+        height: 100%;
+          
+           width: 100%;
+           
+          }
+
+          .popup .content1 {
+            max-height: 10%;
+            max-width: 150ch;
+           
+          }
+
+
     </style>
 
 </head>
@@ -46,7 +143,7 @@
 
             <!-- Logo -->
             <a class="logo" href="#">
-                <img src="./Assets/Images/logo-light.png" alt="logo">
+                <h3 style="color: white;"> Medyoda</h3>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,15 +162,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#services" data-scroll-nav="2">Services</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio" data-scroll-nav="3">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#team" data-scroll-nav="4">Team</a>
-                    </li>
-
-
-                    <li class="nav-item">
+                                        <li class="nav-item">
                         <a class="nav-link" href="#contact" data-scroll-nav="6">Contact</a>
                     </li>
                 </ul>
@@ -127,9 +216,11 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="o-hidden mw-800">
-                                  
+                                   <!--- <h3>Quality medical assistance at your doorstep</h3>-->
                                     <p class="slider-text">When it comes to medical assistance, MedYoda has a expert team to give you the best assistance at your doorstep.</p>
-                                  
+                                    <a href="#services" class="butn butn-tra butn-bord-trans mt-50">
+                                        <span>Our Services</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -142,12 +233,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="o-hidden mw-800">
-                                    <h3>Get the best assistance from our team</h3>
+                                    <!---<h3>Get the best assistance from our team</h3>-->
                                     <p class="slider-text">When it comes to medical assistance, MedYoda has a expert team to give you the best assistance at your doorstep.</p>
-                                    <a href="#0" class="butn butn-bord-trans mt-50">
-                                        <span>Book An Appointment</span>
-                                    </a>
-                                    <a href="#0" class="butn butn-tra butn-bord-trans mt-50">
+                                    <a href="#services" class="butn butn-tra butn-bord-trans mt-50">
                                         <span>Our Services</span>
                                     </a>
                                 </div>
@@ -174,8 +262,7 @@
 
                 <div class="col-lg-6">
                     <div class="info section-padding" style="padding-bottom: 15px;">
-                        <h5>YOU ARE LOOKING FOR US.</h5>
-                     
+                        <h3>YOU ARE LOOKING FOR US.</h3>
                         <p> MedYoda is a leading medical research and staffing solution provider pioneering in the niche of Emergency Medicine, Pre Hospital Care and Pharmaceuticals. MedYoda follows the best practices in medical care and maintains industry
                             norm protocols and standards with a shared vision for providing convenient and affordable access to high-quality preventive, primary and speciality care in the community benefiting all section of people without compromise in
                             quality of services offered. MedYoda embodies the promise to deliver an experience of Complete connected care to ensure that no matter where an individual is in the path of health, people will benefit from the truly seamless
@@ -219,60 +306,148 @@
                 <h4>our services</h4>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-12 col-xs-12 ">
-                    <div class="box-icon-left items">
-                        <span class="icon"><i class="fa fa-stethoscope"></i></span>
-                        <div class="cont">
-                            <h5 class="mb-10">Doctor Consulting</h5>
-                            <p class="pb-10">Just give us a call and our doctor will be at your doorstep for medical assistance.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="box-icon-left items">
-                        <span class="icon"><i class="fa fa-flask"></i></span>
-                        <div class="cont">
-                            <h5 class="mb-10">Lab Testing</h5>
-                            <p class="pb-10">Our support team will perform lab testing at your doorstep.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="box-icon-left items">
-                        <span class="icon"><i class="fa fa-odnoklassniki"></i></span>
-                        <div class="cont">
-                            <h5 class="mb-10">Physiotherapy Workout</h5>
-                            <p class="pb-10">Get the best physiotherapy workout at your home from our expert physician.</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-12 col-xs-12 ">
-                    <div class="box-icon-left items">
-                        <span class="icon"><i class="fa fa-ambulance"></i></span>
-                        <div class="cont">
-                            <h5 class="mb-10">Ambulance Assistance</h5>
-                            <p class="pb-10">In case of any emergency, give us a call and our support team will assist you with our Ambulance.</p>
-
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="box-icon-left items">
                         <span class="icon"><i class="fa fa-motorcycle"></i></span>
                         <div class="cont">
-                            <h5 class="mb-10">Pharmaceutical Delivery</h5>
-                            <p class="pb-10">MedYoda has partnered with various organisations to deliver quality pharmaceutical products on time.</p>
+                            <h5 class="mb-10">Medical Tourism</h5>
+                            <a href="#popup6" class="pb-10">Unique to the medical tourism sector, MedYoda provides end to end care for its health travelers.</a>
 
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="box-icon-left items">
+                        <span class="icon"><i class="fa fa-stethoscope"></i></span>
+                        <div class="cont">
+                            <h5 class="mb-10">Second Opinion</h5>
+                            <a href="#popup5" class="pb-10">Quick and Easy Digital Access.The program allows you to connect with our doctors without leaving the comfort of your home.</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="box-icon-left items">
+                        <span class="icon"><i class="fa fa-user-md"></i></span>
+                        <div class="cont">
+                            <h5 class="mb-10">Consultancy - ER/ICU (Doctors & Staff)</h5>
+                            <a href="#popup4" class="pb-10">Every hospital needs a core team that can manage all emergencies in and outside the hospital.</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="box-icon-left items">
+                        <span class="icon"><i class="fa fa-medkit"></i></span>
+                        <div class="cont">
+                            <h5 class="mb-10">Pharmaceuticals</h5>
+                            <a href="#popup3" class="pb-10">MedYoda is an Indian Pharmaceutical company which is a fully integrated and global healthcare provider.</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="box-icon-left items">
+                        <span class="icon"><i class="fa fa-graduation-cap"></i></span>
+                        <div class="cont">
+                            <h5 class="mb-10">Study Medicine Abroad</h5>
+                            <a href="#popup2" class="pb-10"> MedYoda is one of the few companies recognized by the Kyrgyzstan University to facilitate International Students aspiring to study medicine abroad.<p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="box-icon-left items">
+                        <span class="icon"><i class="fa fa-ambulance"></i></span>
+                        <div class="cont">
+                            <h5 class="mb-10">Ambulance Automation Research</h5>
+                            <a href="#popup1" class="pb-10"> Pre-hospital care and ambulance automation are an unexplored sector in the health care industry.<p>
+                        </div>
+                    </div>
+                </div>
+
+           
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            Pre-hospital care and ambulance automation are an unexplored sector in the health care industry. 
+      	India witness’s approximately 400 road accident related dearth's every day. Sadly, 54.1% of people killed in road accidents are in the 15-34 years age group.
+      	The Government of India, Government of Rajasthan and the World Bank have signed a US$250 million loan agreement for the Rajasthan State Highways Development Program II Project to build the state's capacity to better manage its highways and improve traffic flows to ensure road safety and to reduce the causalities caused by RTA’s.
+.     	MedYoda with its team of Doctors and Transport Automation experts are closely working with the Tamil Nadu police and IIT Madras. They have designed an ambulance automation project to support IRAD. The proposal is currently under review with IIT Madras. 
+      	The project aims in bridging the hospitals, police & Fire to work on a common platform. MedYoda is also working on an AI software that can help us predict the future occurrence of accidents with precise date, time and location.  
+      	MedYoda believes this prediction will revolutionize the fields of trauma care and redefine pre-hospital care.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popup2" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            MedYoda is one of the few companies recognized by the Kyrgyzstan University to facilitate International Students aspiring to study medicine abroad. Our company stands out among the rest as we not only help with admissions but also provide support until graduation. We are exclusive partner of many top universities of Kyrgyzstan. 
+We have Indian origin Educational Advisor representatives to provide pastoral, welfare care and to support our students. 
+Our global team of highly qualified Education Consultants will always provide honest, reliable and unbiased advice which will be individually tailored to meet the needs of every student.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popup3" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            MedYoda is an Indian Pharmaceutical company which is a fully integrated and global healthcare provider. With comprehensive domain expertise in health care sector, we take pride in offering high-quality trusted medicines in multiple therapeutic categories and diverse range of pharmaceutical products that aids in continuum of health care.
+     	We believe in maintaining transparency in every aspect of function and are conscious to sustain and simplify our operational excellence through implementation of global standard management systems.
+     	MedYoda is synonymous with prestige and trust. We take pride in collaborating with the finest doctors and subject matter experts specialising in various niche domains to understand their preferences of salt combinations. Our best in class Pharmaceuticals production partners comply to our quality policy in the selection of premium salts and obeys to restrictive selection standards, in terms of quality and innovation. Only the best of each specialty.
+     	Our partners must comply with a strict set of values and requirements to gain access to an active part of MedYoda's portfolio of services and products. They will also gain the access to our commercial network in across India, Myanmar, Vietnam and Thailand ranging from the highest quality in materials to ensure the excellence in results with patients and doctors.
+        The future of Med Yoda consists in offering integral solutions of medical and pharmaceutical products for the care of the Health industry in South Asian and South East Asian countries. Our guarantee is wide and varying: team, commitment, technological innovation, transparency, business strength and experience.
+                         </div>
+                    </div>
+                </div>
+
+                <div id="popup4" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            Every hospital needs a core team that can manage all emergencies in and outside the hospital. The Doctors from MedYoda follow strict & standard treatment protocols and displaying a high sense of professionalism with compassion. 
+                            The emergency department in a hospital is the face of a health care system.  The ICU is the department where clinical outcomes of the critically ill is meticulously monitored and improved. 
+                            MedYoda steps-in, in displaying the effectiveness of a both these systems and ensure they work in harmony and co-ordination. 
+                            Being the core system in a hospital, we believe ‘the stronger the core – the better the system’. Thus, we at MedYoda provide a customized emergency medicine and critical care work force that the hospital requires, keeping in mind their financial restrictions.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popup5" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            Quick and Easy Digital Access
+                            If you are facing a complex medical issue, MedYoda’s Second Opinion Program provides access to our panel of expert Doctors who can guide and elaborate on your current medical condition. 
+                            The program allows you to connect with our doctors without leaving the comfort of your home. 
+                            Share your medical history with our Doctors. On reviewing the details we shall provide you a personalized treatment recommendation. 
+                            This service is extended @ Rs 1 (Including GST).
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popup6" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content1 ">
+                            There are countless reasons why MedYoda Chennai is an ideal destination for medical tourism. Unique to the medical tourism sector, MedYoda provides end to end care for its health travelers.  
+                            MedYoda has a council of doctors on board who directly communicate with the patient and their Doctors even before they depart from their home country. The MedYoda doctors give them a clear picture of treatment, the different multispecialty hospitals in the region, the profile of the Doctor who is going to conduct the procedure and the different cost factors. This gives tourists clarity and assurance, of quality, safety standards and regulations within the industry. 
+                            The south Indian healthcare offers specialties in various medical disciplines and conducts some of the most complicated treatments worldwide. 
+                            Today, the medical care in India is on par with the best in the world where innovation and international expertise are key. Foreign patients seeking medical treatments in Chennai are primarily from Middle East and Africa.  South East Asian, Eastern Asian, Chinese, Japanese, Australian, European, the Americans are regular visitors.  
+                            MedYoda, further extends its support from the time they land in India till they happily take off.                          </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </section>
+            </section>
     <!-- End services  -->
 
 
@@ -420,15 +595,71 @@
 
     <!-- End Works  -->
 
-  
+    <!--  Start Teams
+
+    <section id="team" class="team section-padding" style="padding-bottom: 10px; padding-top: 0px;" data-scroll-index="4">
+        <div class="container">
+            <div class="row">
+
+                <div class="section-head text-center col-sm-12">
+                    <h4>Creative Team</h4>
+                    <p style="margin-bottom: 0px !important;">World Class Best Team to offer services in Pharma Industry</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="item">
+                            <div class="team-img">
+                                <img src="./Assets/Images/team1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <h6>Mr. P Sabarimanian</h6>
+                                    <span>CEO</span>
+                                    <div class="social">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="item">
+                            <div class="team-img">
+                                <img src="./Assets/Images/team2.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <h6>Dr. P Girish Devanadan</h6>
+                                    <span>Proprietor</span>
+                                    <div class="social">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    End Teams  -->
+
+
     <!--  Start video -->
     <section class="video section-padding valign">
         <div class="overlay"></div>
         <div class="container text-center">
             <!-- content info -->
             <div class="info">
-                <h5>We keep working today's the best care and service for our patients</h5>
-                <h3>We make sure be with you in all the time at various approaches</h3>
+                <h5 style="color: black;">We keep working today's the best care and service for our patients</h5>
+                <h3 style="color: black;">We make sure be with you in all the time at various approaches</h3>
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 19.6" preserveAspectRatio="none">
@@ -440,6 +671,93 @@
     </section>
 
     <!-- End video  -->
+
+
+<!--------------------
+     Start Testimonials-Grid 
+
+    <section class="testimonials-grid section-padding bg-img bg-fixed bg-gray" style="padding-top: 20px; padding-bottom: 40px;">
+        <div class="container">
+            <div class="row">
+
+                <div style="margin-bottom: 0px !important;" class="section-head text-center col-sm-12">
+                    <h4>Our Clients</h4>
+
+                </div>
+
+                <div class="owl-carousel owl-theme col-lg-12">
+                    <div class="item text-center">
+                        <div class="info">
+                            <h6> Apollo Hospitals</h6>
+                            <div class="img">
+                                <img src="./Assets/Images/hospital1.png" alt="">
+                            </div>
+                        </div>
+                        <p>The staff and nurses were very good and had really very good experience ...Thank you so much for all the staff</p>
+                        <div class="stars">
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star-half"></i></span>
+                        </div>
+                    </div>
+                    <div class="item text-center">
+                        <div class="info">
+                            <h6> Deepam Hospital </h6>
+                            <div class="img">
+                                <img src="./Assets/Images/hospital2.png" alt="">
+                            </div>
+                        </div>
+                        <p>The staff were very good and very polite.We had a really very good experience ...Thank you so much for all the staff</p>
+                        <div class="stars">
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star-half"></i></span>
+                        </div>
+                    </div>
+                    <div class="item text-center">
+                        <div class="info">
+                            <h6> Chennai Hospital </h6>
+                            <div class="img">
+                                <img src="./Assets/Images/hospital3.png" alt="">
+                            </div>
+                        </div>
+                        <p>The staff were very good and had really very good experience ...Thank you so much for all the staff </p>
+                        <div class="stars">
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star-half"></i></span>
+                        </div>
+                    </div>
+                    <div class="item text-center">
+                        <div class="info">
+                            <h6>Stanley Medical College </h6>
+                            <div class="img">
+                                <img src="./Assets/Images/hospital4.png" alt="">
+                            </div>
+                        </div>
+                        <p>The staff were very good and very polite.We had a really very good experience ...Thank you so much for all the staff</p>
+                        <div class="stars">
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star-half"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+ End Testimonials-Grid  -->
+
 
 
 

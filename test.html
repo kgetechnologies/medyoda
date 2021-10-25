@@ -30,6 +30,9 @@
 	.click-more:hover span {
     color: #4e54c8;
 }
+body.fixedscroll{
+overflow:hidden !important;
+}
 	
 .click-more:hover {
     background-color: transparent;
@@ -105,7 +108,7 @@
             background: #06D85F;
           }
           .overlay {
-		  z-index:9;
+			z-index:9;
             position: fixed;
             top: 0;
             bottom: 0;
@@ -1019,7 +1022,14 @@ MedYoda, further extends its support from the time they land in India till they 
                 moreText.style.display = "inline";
             }
         }
-
+		$(".click-more").click(()=>{
+          $('body').addClass('fixedscroll');
+   });
+  
+	$(".popup .close").click(()=>{
+             $('body').removeClass('fixedscroll');
+         });
+		
         function watsupturl() {
             window.open("https://wa.me/919990900131");
         }
